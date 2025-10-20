@@ -8,5 +8,6 @@ The web browser uses the NexaSearch Engine to look up websites on the internet. 
 >[!IMPORTANT]
 >NexaSearch Engine is in its Alpha Build stage. If you want more accurate results, use your prefered search engine.
 
+<img width="1472" height="986" alt="image" src="https://github.com/user-attachments/assets/6e7f80c6-2fbd-4d25-a924-5cef0b5d13c8" />
 
 _*Read licence before use of this software*_
