@@ -1,0 +1,26 @@
+Proprietary License
+
+Copyright (c) 2025 Riley Northcote
+All rights reserved.
+
+This software and associated documentation files (the "Software") are the proprietary property of Riley Northcote. 
+
+Permission is hereby granted to any person obtaining a copy of the Software to use the Software for personal, educational, research, or internal business purposes, subject to the following restrictions:
+
+1. No Redistribution: You may not distribute, sublicense, sell, rent, lease, lend, or otherwise transfer the Software to any third party without prior written permission from the copyright holder.
+
+2. No Modification for Distribution: You may modify the Software for your own internal use, but you may not distribute modified versions without prior written permission.
+
+3. No Reverse Engineering: You may not reverse engineer, decompile, or disassemble the Software, except to the extent that such activity is expressly permitted by applicable law.
+
+4. Ownership: The Software is licensed, not sold. All rights, title, and interest in and to the Software, including all intellectual property rights, remain with the copyright holder.
+
+5. Warranty Disclaimer: THE SOFTWARE IS PROVIDED "AS IS" AND WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.
+
+6. Limitation of Liability: IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+7. Third-Party Components: This Software may include components licensed from third parties. Such components are subject to their own license terms. You are responsible for complying with those terms.
+
+8. Termination: Any breach of this license will result in the automatic termination of your rights under this license.
+
+By using the Software, you agree to be bound by the terms of this license. If you do not agree, you must cease using the Software immediately.

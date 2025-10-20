@@ -1,0 +1,32 @@
+{
+  "name": "nexabrowser",
+  "version": "1.0.0",
+  "description": "NexaBrowser - A Chromium-based web browser with NexaSearch as home page",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build-win": "electron-builder --win",
+    "package": "electron-packager . NexaBrowser --platform=win32 --arch=x64 --icon=assets/icon.ico --out=dist --overwrite"
+  },
+  "keywords": [
+    "browser",
+    "chromium",
+    "electron"
+  ],
+  "author": "Riley Northcote",
+  "license": "Proprietary",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1",
+    "electron-packager": "^17.1.2"
+  },
+  "build": {
+    "appId": "com.nexabrowser.app",
+    "productName": "NexaBrowser",
+    "win": {
+      "target": "dir",
+      "icon": "assets/icon.ico"
+    }
+  }
+}

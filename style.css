@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f5f5f5;
+  --surface: #ffffff;
+  --border: #e0e0e0;
+  --text: #202124;
+  --muted: #5f6368;
+  --muted-2: #80868b;
+  --chip: #f1f3f4;
+  --chip-hover: #e8eaed;
+  --primary: #1a73e8;
+  --primary-hover: #1765cc;
+  --primary-active: #1557b0;
+  --progress: linear-gradient(90deg, #4285f4, #34a853, #fbbc04, #ea4335);
+}
+
+[data-theme="dark"] {
+  --bg: #0b0f14;
+  --surface: #0f141a;
+  --border: #1f2937;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --muted-2: #a3a3a3;
+  --chip: #111827;
+  --chip-hover: #1f2937;
+  --primary: #60a5fa;
+  --primary-hover: #3b82f6;
+  --primary-active: #2563eb;
+  --progress: linear-gradient(90deg, #60a5fa, #34d399, #fbbf24, #f87171);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Tab Bar */
+.tab-bar {
+  display: flex;
+  align-items: flex-end;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 8px 0 8px;
+  height: 42px;
+  gap: 4px;
+}
+
+.tabs-container {
+  display: flex;
+  flex: 1;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 2px;
+  scrollbar-width: none;
+}
+
+.tabs-container::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  min-width: 120px;
+  max-width: 240px;
+  height: 34px;
+  padding: 0 12px;
+  background: var(--chip);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.1s;
+  border: 1px solid transparent;
+  border-bottom: none;
+  gap: 8px;
+}
+
+.tab:hover {
+  background: var(--chip-hover);
+}
+
+.tab.active {
+  background: var(--bg);
+  border-color: var(--border);
+  border-bottom: 1px solid var(--bg);
+  margin-bottom: -1px;
+}
+
+.tab-favicon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-favicon svg {
+  width: 16px;
+  height: 16px;
+  color: var(--muted);
+}
+
+.tab-title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+  color: var(--text);
+  user-select: none;
+}
+
+.tab-close {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.1s, background-color 0.1s;
+}
+
+.tab:hover .tab-close {
+  opacity: 1;
+}
+
+.tab.active .tab-close {
+  opacity: 1;
+}
+
+.tab-close:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .tab-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.tab-close svg {
+  width: 12px;
+  height: 12px;
+  stroke: var(--muted);
+  stroke-width: 2.5;
+}
+
+.new-tab-btn {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  transition: background-color 0.2s;
+  flex-shrink: 0;
+  margin-bottom: 3px;
+}
+
+.new-tab-btn:hover {
+  background: var(--chip);
+}
+
+.new-tab-btn svg {
+  stroke: currentColor;
+}
+
+/* Navigation Bar */
+.browser-ui {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navigation-bar {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  gap: 8px;
+  height: 60px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.nav-btn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  transition: background-color 0.2s;
+}
+
+.nav-btn:hover {
+  background: var(--chip);
+}
+
+.nav-btn:active {
+  background: var(--chip-hover);
+}
+
+.nav-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.menu-buttons {
+  display: flex;
+  gap: 4px;
+  margin-left: 4px;
+}
+
+.address-bar-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: var(--chip);
+  border-radius: 24px;
+  padding: 0 15px;
+  height: 40px;
+  gap: 8px;
+}
+
+.address-bar-container:focus-within {
+  background: var(--surface);
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+
+.security-icon {
+  display: flex;
+  align-items: center;
+  color: var(--muted);
+}
+
+.address-bar {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  color: var(--text);
+  font-family: inherit;
+}
+
+.address-bar::placeholder {
+  color: var(--muted-2);
+}
+
+.go-btn {
+  padding: 6px 16px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.go-btn:hover {
+  background: var(--primary-hover);
+}
+
+.go-btn:active {
+  background: var(--primary-active);
+}
+
+.loading-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--progress);
+  background-size: 200% 100%;
+  animation: loading 2s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.loading-indicator.active {
+  opacity: 1;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
