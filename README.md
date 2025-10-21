@@ -10,4 +10,4 @@ The web browser uses the NexaSearch Engine to look up websites on the internet. 
 
 <img width="1472" height="986" alt="image" src="https://github.com/user-attachments/assets/6e7f80c6-2fbd-4d25-a924-5cef0b5d13c8" />
 
-_*Read licence before use of this software*_
+_*Read [licence](https://github.com/Northy2410/NexaBrowser/blob/main/LICENSE.txt) before use of this software*_
